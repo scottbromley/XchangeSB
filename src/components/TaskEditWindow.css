@@ -1,0 +1,114 @@
+.edit__window__outer {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  animation: enterWindow 0.5s ease-out;
+  width: 100%;
+  top: 0px;
+}
+
+@keyframes enterWindow {
+  from {
+    top: -500px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.exit__animation {
+  animation: exitWindow 0.5s ease-in;
+  
+}
+
+@keyframes exitWindow {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -500px;
+  }
+}
+
+.edit__window__header {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  height: fit-content;
+}
+
+.edit__window__header > h3 {
+  margin: 3px;
+}
+
+.close__icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.edit__window__content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drop__down{
+    width: 80%;
+}
+
+
+.dropdown__box__outer{
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    
+}
+
+
+.dropdown__box{
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    height: 30px;
+    
+}
+
+
+#demo-simple-select-label{
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.text__input__dd{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text__input__dd>textarea{
+    height: 80px;
+    line-height: 20px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    rows: 4;
+    font-family: inherit;
+}
+
+.edit__window__content>button{
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+}

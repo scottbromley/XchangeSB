@@ -1,0 +1,85 @@
+.individual__task__pane{
+    height: fit-content;
+    margin: 10px;
+    background-color: RGBA(71, 91, 90, 0.1);
+    box-shadow: 10px 4px 20px -6px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 10px;
+    padding: 5px;
+    position: relative;
+}
+
+.buyer__solicitor{
+    background-color: rgb(71, 91, 90, 0.5);
+}
+
+.seller__solicitor{
+    background-color: rgb(12, 10, 62, 0.5);
+}
+
+.surveyor{
+    background-color: rgb(129, 83, 85, 0.5);
+}
+
+.buyer{
+    background-color: orange;
+}
+
+.seller{
+    background-color: pink;
+}
+
+.mortgage__lender{
+    background-color: rgb(207, 219, 213);
+}
+
+.individual__task__pane:hover{
+    cursor: pointer;
+    box-shadow: 10px 4px 20px -6px rgba(0, 0, 0, 0.7);
+}
+
+.task__title{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    display: flex;
+    color: rgb(12, 10, 62);
+    padding: 5px;
+    justify-content: space-between;
+    align-items: top;
+    
+}
+
+.task__description{
+    text-align: left;
+    padding: 2px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+.task__next__steps{
+    text-align: left;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 0px 0px 3px 3px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.task__bridge__completion{
+    text-align: center;
+    padding: 5px;
+}
+
+.task__timings{
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+    bottom: 2px;
+}
+
+.being_dragged{
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+}

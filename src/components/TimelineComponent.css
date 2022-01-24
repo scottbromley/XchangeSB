@@ -1,0 +1,49 @@
+.timeline__outer{
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline__inner{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    color: black;
+    z-index: 4;
+    border-radius: 5px;
+    box-shadow: 10px 4px 20px -6px rgba(0, 0, 0, 0.7);
+}
+
+.timeline__inner>button{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: white;
+    border: 1px solid grey;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.timeline__area {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 5;
+    margin: 10px;
+    overflow-y: scroll;
+}
+
+.timeline__content__card{
+    width: fit-content;
+    text-align: center;
+}

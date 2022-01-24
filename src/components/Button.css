@@ -1,0 +1,16 @@
+.sign__out__button__root {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sign__out__button__root:hover{
+    cursor: pointer;
+    color: rgb(88, 78, 78)
+}

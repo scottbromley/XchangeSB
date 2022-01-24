@@ -1,0 +1,139 @@
+.progress__information{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 4px 20px -6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: absolute;
+    top: 75px;
+    left: 110px;
+    right: 10px;
+    height: 50px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canban__board{
+    background-color: rgba(221, 221, 221, 0.0);
+    position: absolute;
+    top: 125px;
+    left: 110px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    justify-content: space-around;
+    
+}
+
+.not__started, .in__progress, .completed{
+    background-color: white;
+    width: 30%;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 4px 20px -6px rgba(0,0,0,0.2);
+    font-weight: 900;
+    font-size: 12px;
+    color:rgb(12, 10, 62);;
+    margin: 20px; 
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1200px){
+    .not__started, .in__progress, .completed{
+        margin: 5px;
+        margin-top: 20px;
+    }
+    .canban__board{
+        left: 100px;
+        right: 0px;
+    }
+}
+
+.bar__info{
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+}
+
+.number__of__tasks{
+    position: absolute;
+    background-color:rgb(12, 10, 62);
+    color: white;
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 400;
+    top: 3px;
+    left: 5px;
+}
+
+.add__new__task{
+    font-size: 12px;
+    color:rgb(12, 10, 62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add__new__task__button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.add__new__task__button > button {
+    background-color:rgb(12, 10, 62);
+    border: none;
+    border-radius: 30px;
+    color:whitesmoke;
+    height: 30px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.add__new__task__button:hover{
+    font-weight: 600;
+    color:rgb(27, 25, 80);;
+    cursor: pointer;
+}
+
+.add__new__task__pane>form{
+    z-index: 10;
+    background-color:rgb(12, 10, 62);
+    border-radius: 10px;
+    color: whitesmoke;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 300px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.dragged__over__column{
+    border: 5px solid rgba(253, 77, 77, 0.192);
+}

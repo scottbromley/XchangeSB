@@ -1,0 +1,14 @@
+.user__settings__pane__outer{
+    height: 40vh;
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    color: rgb(78, 78, 78);
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    z-index: 4;
+    border-radius: 10px;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.2);
+    transition-duration: 0.5s;
+}
+

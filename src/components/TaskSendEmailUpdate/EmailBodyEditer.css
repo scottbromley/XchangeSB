@@ -1,0 +1,72 @@
+.email__body__editor__outer {
+  width: 100%;
+  font: inherit;
+  font-size: 12px;
+}
+
+.email__body__editor__subject {
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font: inherit;
+}
+
+.email__body__editor__subject>p{
+position: absolute;
+top: 0px;
+    left: 4%;
+padding: 3px;
+margin: 3px;
+font-size: 14px;
+font-weight: 400;
+}
+
+
+.email__body__editor__subject > textarea {
+  margin-top: 30px;
+    width: 90%;
+  font: inherit;
+  word-wrap: break-word;
+  height: fit-content;
+  height: 20px;
+  line-height: 20px;
+  rows: 1;
+}
+
+.email__body__editor__body {
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font: inherit;
+}
+
+.email__body__editor__body>p{
+    position: absolute;
+top: 0px;
+    left: 4%;
+padding: 3px;
+margin: 3px;
+font-size: 14px;
+font-weight: 400;
+    }
+
+.email__body__editor__body>textarea {
+  width: 90%;
+  margin-top: 30px;
+  font: inherit;
+  word-wrap: break-word;
+  height: fit-content;
+  height: 120px;
+  line-height: 20px;
+  rows: 6;
+}

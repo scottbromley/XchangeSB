@@ -1,0 +1,83 @@
+.add__new__task__pane{
+    position: absolute;
+    /* left: -25px; */
+    top: 0px;
+    bottom: 0px;
+    height: 100px;
+    animation: slideIn 0.5s ease-in;
+    left: -25px;
+    
+}
+
+.add__new__task__pane>form{
+    z-index: 1;
+    /* background-color:rgb(12, 10, 62); */
+    background-color: whitesmoke;
+    border-radius: 0px 10px 10px 0px ;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(46, 46, 46);
+    text-align: left;
+    text-indent: 10px;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 300px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.add__new__header{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.add__new__header>h3{
+    font-weight: 800;
+    position: relative;
+    left: 80px;
+}
+
+#description{
+    height: 120px;
+    line-height: 20px;
+    rows: 6;
+    
+}
+
+.add__new__task__pane>form>input, .add__new__task__pane>form>textarea{
+    padding: 2px;
+    margin: 5px;
+    resize: none;
+    word-wrap: break-word;
+    height: fit-content;
+}
+
+.add__new__task__pane>form>button{
+    padding: 5px;
+    margin: 5px;
+    margin-top: 8px;
+    background-color: rgb(214, 212, 212);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+@keyframes slideIn {
+    from {
+        left: -200px;
+    }
+    to {
+        left: -25px;
+    }
+} 
+
+@keyframes slideOut {
+    from {
+        left: -25px;
+    }
+    to {
+        left: -200px;
+    }
+} 

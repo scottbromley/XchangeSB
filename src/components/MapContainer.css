@@ -1,0 +1,23 @@
+.map__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    
+}
+
+.map{
+    border-radius: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.marker__label{
+    position: relative;
+    background-color: red;
+    bottom: 32px;
+    text-shadow: 2px 2px 1px #000000;
+}

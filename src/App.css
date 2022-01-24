@@ -1,0 +1,129 @@
+.app {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  background-color: #f0f0f0;
+  z-index: -2;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 0px;
+}
+
+
+.header__bar{
+  position: fixed;
+  background: linear-gradient(to right, rgba(15, 4, 116, 1), rgba(27, 25, 80, 1));
+  left: 100px;
+  top: 0px;
+  right: 0px;
+  height: 60px;
+  z-index: 1;
+  color: white;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.sign__out__button__div{
+  position: absolute;
+  right: 1vw;
+  font-size: 12px;
+ 
+}
+
+.header__bar__user__info{
+  position: absolute;
+  width: 300px;
+  left: 10px;
+  display: flex;
+  vertical-align: middle;
+
+
+}
+
+.user__settings__dots{
+  background-color: rgb(226, 17, 17, 0);
+  border: none;
+  height: 4vh;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more__dots__icon{
+  color: white;
+  cursor: pointer;
+}
+
+.more__dots__icon:hover{
+  color:rgb(131, 133, 118)
+}
+
+.user__picture{
+  position: absolute;
+  left: 15px;
+  height: fit-content;
+  
+}
+
+.header__bar__display__name{
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  left: 50px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.app__login__outer {
+  left: 1vw;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  padding: 0px;
+  margin: 0px;
+  width: 45vw;
+  height: 45vh;
+  padding-bottom: 0px;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.2);
+  border-radius: 8px 8px 8px 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.admin__button{
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.admin__button > button {
+  background-color: white;
+  padding: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.2);
+}
+
+.admin__button > button:hover {
+  background-color: grey;
+}
+
+
+
+
+
