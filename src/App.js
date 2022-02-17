@@ -18,7 +18,7 @@ import { CSSTransition } from "react-transition-group";
 import firebase from "firebase";
 import "firebase/auth";
 import "firebase/firestore";
-import { useCollectionData } from "react-firebase-hooks/firestore";
+// import { useCollectionData } from "react-firebase-hooks/firestore";
 
 firebase.initializeApp({
   apiKey: "AIzaSyDsi67Gu4vjQ3IqKcwd-4Vhs7opBpckUZQ",
