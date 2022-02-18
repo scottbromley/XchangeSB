@@ -137,9 +137,9 @@ function App() {
             <div className="sign__out__button__div">
               <Button onClick={signOut}>Sign Out</Button>
             </div>
-            <div>
+            {/* <div>
               <button onClick={handleEmailClick}>Send Email</button>
-            </div>
+            </div> */}
 
             <div className="header__bar__user__info">
               <button
@@ -160,13 +160,13 @@ function App() {
               <div className="header__bar__display__name">
                 {user.displayName}
               </div>
-              <div className="admin__button">
+              {/* <div className="admin__button">
                 {user.uid === "3YJdvu9PcTMvmfhvRA4VAbYUCqF2" ? (
                   <button onClick={setAdminPane}>Admin</button>
                 ) : (
                   <div></div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
 

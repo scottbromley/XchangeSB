@@ -14,6 +14,16 @@
    
 }
 
+.property__tile__hint{
+    color: salmon;
+}
+
+.property__tile__photo{
+   height: 150px;
+   width: 150px;
+   border-radius: 5px;
+}
+
 .auto__complete__area{
     width: 400px;
     z-index: 10;

@@ -26,8 +26,16 @@ const Channel = ({ user = null }) => {
     const [ environmentElement, setEnvironmentElement ] = useState('')
     const { uid, displayName, photoURL } = user;
     
+    const [ warningMessageToggle, setWarningMessageToggle ] = useState(true);
+
+
     function environmentSetFunction(props){
-        environmentSetter(props);
+        console.log(warningMessageToggle)
+        if(warningMessageToggle){
+            alert("Please select an ective property environment! You can do this with the buttons to the right of each property pane.")
+        } else {
+            environmentSetter(props);
+        }
     };
 
     const [activePropertyEnvironment, setActivePropertyEnvironment] = useState(
@@ -35,15 +43,16 @@ const Channel = ({ user = null }) => {
       );
     
       function handlePropertyEnvironmentToggle(propertyDetail){
-        setActivePropertyEnvironment(propertyDetail);
+            setWarningMessageToggle(false);
+            setActivePropertyEnvironment(propertyDetail);
       }
 
     useEffect(()=>{
         var tempEnvironmentVariable = '';
         if(appEnvironment === 'HOME'){
-            tempEnvironmentVariable = <Homepage activePropertyEnvironment={activePropertyEnvironment} handlePropertyEnvironmentToggle={handlePropertyEnvironmentToggle} userinfo={user}/>;
+            tempEnvironmentVariable = <Homepage setWarningMessageToggle={setWarningMessageToggle} activePropertyEnvironment={activePropertyEnvironment} handlePropertyEnvironmentToggle={handlePropertyEnvironmentToggle} userinfo={user}/>;
         } else if (appEnvironment === 'CHAT') {
-            tempEnvironmentVariable = <Chatpage user={user}/>;
+            tempEnvironmentVariable = <Chatpage user={user} activePropertyEnvironment={activePropertyEnvironment}/>;
         } else if (appEnvironment === 'TASK') {
             tempEnvironmentVariable = <Taskpage activePropertyEnvironment={activePropertyEnvironment} displayName={displayName}/>;
         }
@@ -101,7 +110,7 @@ const Channel = ({ user = null }) => {
            
             
         </div>
-    </div >
+    </div>
     );
        
 };

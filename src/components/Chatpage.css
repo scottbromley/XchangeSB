@@ -1,19 +1,32 @@
-
+.app__form{
+  left: 120px;
+  right: 20px;
+  bottom: 10px;
+  height: 60px;
+  background-color: whitesmoke;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+}
 
 
 .text__input{
     width: 40vw;
     margin: 20px;
+    right: 20px;
+
 }
 
 .message__area{
     position: absolute;
+    left: 120px;
+    border-radius: 5px;
     right: 0px;
     top: 0px;
     width: 92vw;
-    bottom: 90px;
+    bottom: 100px;
     top: 8vh;
     background-color:rgba(255, 255, 255, 0.849);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     overflow-y: scroll;
 }
 

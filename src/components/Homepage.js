@@ -25,12 +25,13 @@ const formatDate = (date) => {
   return formattedDate;
 };
 
-function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironmentToggle, }) {
+function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironmentToggle, setWarningMessageToggle }) {
   
   const db = firebase.firestore();
   const userIdentification = userinfo.uid;
 
   const [propertyInfoWidget, setPropertyInfoWidget] = useState();
+  
 
   useEffect(() => {
     db.collection("Properties").where("AssociatedUsers", "array-contains", userinfo.uid).onSnapshot((snapshot) => {
@@ -43,12 +44,13 @@ function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironme
               "highlight__selected__class"
             }`}
           >
-            <MapContainer
+          <img src={doc.data().PhotoURL} className="property__tile__photo" />
+            {/* <MapContainer
               latitude={doc.data().Latitude}
               longitude={doc.data().Longitude}
               propertyName={doc.data().PropertyName}
               className="map__container__homepage"
-            />
+            /> */}
             <div className="property__information">
               <div className="tile__property__title">
                 {doc.data().PropertyName}
@@ -74,7 +76,8 @@ function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironme
                   <p>
                     {doc.data().HouseName}
                     <br />
-                    {doc.data().FirsLineAddress}
+                    {doc.data().FirstLineAddress}
+                    <br />
                     {doc.data().SecondLineAddress}
                     <br />
                     {doc.data().CityState}
@@ -99,6 +102,9 @@ function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironme
               <div className="tile__people__information">
                 People information
               </div>
+              <div className="property__tile__hint">
+                      {doc.data().PropertyName === "Derby Road" && "Please select this property for a good example in the task page!"}
+              </div>
             </div>
           </div>
         ))
@@ -112,20 +118,22 @@ function Homepage({ userinfo, activePropertyEnvironment, handlePropertyEnvironme
     setAddNewPropertyToggle(!addNewPropertyToggle);
   }
 
+  
+
+
+
   return (
     <div className="homepage__outer">
       <div>
         {addNewPropertyToggle ? <AddNewPropertyPane userinfo={userinfo} closePane={handlePropertyToggleButton}/> : <div></div>}
       </div>
-      <div className="auto__complete__area">
-        <GooglePlacesAutocomplete apiKey="AIzaSyD-Fxjdrzjl8DpqXZpJt1rIEymx7VJiOaQ" apiOptions={{region: 'uk'}}/>
-        
-
-      </div>
+      {/* <div className="auto__complete__area">
+        <GooglePlacesAutocomplete apiKey="AIzaSyD-Fxjdrzjl8DpqXZpJt1rIEymx7VJiOaQ" apiOptions={{region: 'uk'}}/>      
+      </div> */}
       <div className="associated_properties__pane">
         <div className="page__title">
           <button onClick={handlePropertyToggleButton} className="add__new__property__button">Add Property</button>
-          <p className="associated__property__title">Rob Properties</p>
+          <p className="associated__property__title">{userinfo.displayName} Properties</p>
           <p id="active__environment__label">
             <em>Active property environment:</em>{" "}
             {activePropertyEnvironment.name

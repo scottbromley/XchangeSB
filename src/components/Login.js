@@ -116,7 +116,7 @@ function Login(props) {
       <div className="login__form__pane">
         <div className="login__form__inner__div">   
           <div className="login__form__title">
-            Log in
+            Sign Up!
           </div>
           <div className="login__credentials">
             <TextField
@@ -128,8 +128,8 @@ function Login(props) {
             <TextField
               className="login__form__password"
               id="outlined-password-input"
-              label="Password"
-              type="password"
+              label="Full Name"
+              // type="password"
               autoComplete="current-password"
               variant="outlined"
             />

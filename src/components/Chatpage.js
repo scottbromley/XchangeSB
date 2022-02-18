@@ -16,7 +16,8 @@ import ReactScrollableFeed from 'react-scrollable-feed';
 import Message from './Message';
 
 
-const Chatpage = ({ user = null }) => {
+
+const Chatpage = ({ user = null, activePropertyEnvironment}) => {
 
     //SECTION : QUERY AND RENDER MESSAGES
     const db = firebase.firestore();
@@ -26,12 +27,14 @@ const Chatpage = ({ user = null }) => {
 
 
     const [selectedProperty, setProperty] = useState('UbNXcB324mLDCQYptbwS');
-    function selectProperty(props){
-        setProperty(props.id)
+
+    function selectProperty(activePropertyEnvironment){
+        setProperty(activePropertyEnvironment.id)
     };
 
     useEffect(() => {
-        db.collection('Properties').doc(selectedProperty).collection('Messages').onSnapshot(snapshot => {
+        console.log("a new property has been registered in the chatpage" + activePropertyEnvironment.id)
+        db.collection('Properties').doc(activePropertyEnvironment.id).collection('Messages').onSnapshot(snapshot => {
             messagesSetter(snapshot.docs.sort((first, second) =>
             first?.data().createdAt?.seconds <= second?.data().createdAt?.seconds ? -1 : 1
             )
@@ -40,7 +43,7 @@ const Chatpage = ({ user = null }) => {
             ))
             )
         })
-    }, [ , selectedProperty])
+    }, [selectedProperty, activePropertyEnvironment])
 
     useEffect(() => {
         db.collection('Properties').onSnapshot(snapshot => {
@@ -126,7 +129,7 @@ const Chatpage = ({ user = null }) => {
             </FormControl>
             </div>
         </div>
-    </div >
+    </div>
     );
        
 };
